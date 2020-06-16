@@ -21,7 +21,7 @@
             <h3>Balises et attributs HTML</h3>
             <p>On utilise des balises pour décrire le contenu de la page web. Cahque balise possède un nom et représente un certain élément (titre, paragraphe, image, ...). Elles possède un sens (sémantique) et souvent une mise en page par défaut.</p>
             <p class="warning">Il ne faut pas utiliser une balise pour changer l'apparence du texte. C'est la fonction du langage CSS que nous verrons plus tard. On utilise une balise pour insérer un élément particulier.</p>
-            <p>Certaines balises peuvent contenir d'autres éléments (balises ou texte). Dans ce cas, elles commencent par une balise ouvrante et se terminent par une balise fermante.</p>
+            <p>Certaines balises peuvent contenir d'autres éléments (balises ou texte). Dans ce cas, elles commencent par une balise ouvrante et se terminent par une balise fermante:</p>
             <pre><code>
 &lt;nomDeLaBalise&gt; &lt;!--Balise ouvrante--&gt;
     Contenu
@@ -29,7 +29,36 @@
             </code></pre>
             <p class="note">Une balise ne peut être fermée que si les balises qu'elle contient sont fermées également.</p>
             <p class="note">Le texte entre &lt;!-- et --&gt; est ce qu'on appelle un commentaire. Il s'agit d'une indication laissée par le programmeur pour les personnes lisant le programme. Ces informations ne seront pas lues par le naviateur. Attention, puisque tout le monde à accès à ce texte, il ne faut pas y mettre d'informations sensibles (comme des mots de passe).</p>
+            <p>On peut compléter une balise avec des attributs. Les attributs permettent de donner des détails sur l'utilisation de la balise, de fournir des informations au navigateur ou de modifier le contenu de la balise:</p>
+            <pre><code>
+&lt;nomDeLaBalise nomDeLAttribut=&quot;valeur&quot;&gt;
+    Contenu
+&lt;/nomDeLaBalise&gt;
+            </code></pre>
+            <p class="note">Un élément peut posséder plusieurs attributs, il suffit de les mettre les uns à la suite des autres.</p>
+            <p class="note">Certains attributs ne possèdent pas de valeur.</p>
+            <p>Certaines balises ne peuvent rien contenir. Elles permettent parfois d'insérer un élément ou de fournir des données au navigateur. On les utilise souvent avec des attributs:</p>
+            <pre><code>
+&lt;nomDeLaBalise attributOptionnel=&quot;valeur&quot; autreAttributSansValeur /&gt;
+            </code></pre>
 
+            <h3>Page de base en HTML: "Hello, World!"</h3>
+            <p>La page "Hello, World!" est souvent la première page créée (et de manière générale le premier programme créé). C'est un programme simple qui affiche une sorte de bonjour. Mais le cette page est également un excellent moyen d'observer la structure de base d'un programme. Toute les pages écrites devront au minimum avoir la structure suivante (sauf le contenu de <code>&lt;body&gt;</code> et de <code>&lt;title&gt;</code> qui vont changer en fonction de la page.</p>
+            <pre><code>
+&lt;!DOCTYPE html&gt; &lt;!--Cette ligne indique au navigteur que la page contient du code HTML.--&gt;
+
+&lt;html&gt;&lt;!--La balise &lt;html&gt; englobe tout le contenu--&gt;
+    &lt;head&gt; &lt;!--Cette balise contient des métadonnées, informations utiles au navigateur mais généralement non visibles par l&#39;utilisateur.--&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;&lt;!--Permet de choisir le set de caractères. utf-8 permet d&#39;utiliser presque tous les caractères (alphabet latin, idéogrammes asiatiques, arabe, emojis, signes mathématiques, ...).--&gt;
+        &lt;title&gt;Titre&lt;/title&gt;&lt;!--Titre de la page, parfois visible sur l&#39;onglet.--&gt;
+    &lt;/head&gt;&lt;!--Fermeture de la balise &lt;head&gt;--&gt;
+    &lt;body&gt;&lt;!--La balise &lt;body&gt; contient tout le contenu visible de la page.--&gt;
+        &lt;!--Dans cette page, nous avons un titre &lt;h1&gt; ainsi qu&#39;un paragraphe &lt;p&gt;.--&gt;
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+        &lt;p&gt;Bonjour tout le monde!&lt;/p&gt;
+    &lt;/body&gt;&lt;!--Fermeture de la balise &lt;body&gt;--&gt;
+&lt;/html&gt;&lt;!--Fermeture de la balise &lt;html&gt;--&gt;
+            </code></pre>
         </section>
     </main>
 </body>
