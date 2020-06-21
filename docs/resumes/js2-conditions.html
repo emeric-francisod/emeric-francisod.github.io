@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>Cours n°2 Les conditions</title></head>
+<body><h1>Cours n°2: Les conditions</h1>
+<h2>JavaScript</h2>
+<h3>Entrées et sorties</h3>
+<p>Comment interagir avec le programme et afficher des éléments sans utiliser P5.js?</p>
+<p>Il existe de nombreuses manières de faire mais voici le plus simple:</p>
+<pre><code class='language-javascript' lang='javascript'>let variable = null;
+
+variable = prompt(&quot;Message&quot;); //Cette instruction va afficher un popup à l&#39;écran contenant le message donné ainsi qu&#39;un champ. Une fois le champ rempli et validé, variable se verra affcté la valeur entrée dans le champ.
+
+console.log(variable); //La fonction console.log permet d&#39;afficher dans la console la variable ou le texte donné.
+console.log(&quot;Texte&quot;);
+
+alert(&quot;Message&quot;); //La fonction alert permet d&#39;afficher le message ou une variable dans un popup.
+</code></pre>
+<h4>La console</h4>
+<p>La console est très importante. Nous allons la découvrir au fur et à mesure car la pratique et les exemples marchent mieux que des mots. Pour faire court, il s&#39;agit d&#39;un endroit dans le navigateur où l&#39;on peut écrire et exécuter du code JavaScript, ainsi qu&#39;interagir avec les programmes qui tournent.</p>
+<p>Pour ouvrir la console, il faut accéder aux <em>outils de développement</em>. Généralement, on appuie sur la touche <kbd>F12</kbd> du clavier sur une page web.</p>
+<h3>Les booléens</h3>
+<p>Un booléen est une variable ou un litéral (une valeur) pouvant posséder deux valeurs:</p>
+<ul>
+<li><code>true</code> (vrai)</li>
+<li><code>false</code> (faux)</li>
+
+</ul>
+<p>Et c&#39;est tout.</p>
+<h3>Opérations avec les booléens</h3>
+<p>Les booléens possèdent trois opérations qui leurs sont propres. Ces opérations prennent un ou deux booléens et en renvoient un troisième. Le résultat de l&#39;opération est décrit dans les paragraphes suivants, par un tableau. La première colonne contient les valeurs de <code>bool1</code> et la première ligne contient les valeurs de <code>bool2</code>. Le reste du tableau contient le résultat en fonction des valeurs des deux booléens.</p>
+<h4>ET ou AND</h4>
+<p>Renvoi <code>true</code> si et seulement si les deux booléens valent <code>true</code>.</p>
+<pre><code class='language-javascript' lang='javascript'>bool1 &amp;&amp; bool2;
+</code></pre>
+<figure><table>
+<thead>
+<tr><th style='text-align:left;' >&nbsp;</th><th>true</th><th>true</th></tr></thead>
+<tbody><tr><td style='text-align:left;' ><strong>true</strong></td><td>true</td><td>false</td></tr><tr><td style='text-align:left;' ><strong>false</strong></td><td>false</td><td>false</td></tr></tbody>
+</table></figure>
+<h4>OU ou OR</h4>
+<p>Renvoi <code>true</code> si au moins un des deux booléens vaut <code>true</code>.</p>
+<pre><code class='language-javascript' lang='javascript'>bool1 || bool2;
+</code></pre>
+<figure><table>
+<thead>
+<tr><th style='text-align:left;' >&nbsp;</th><th>true</th><th>true</th></tr></thead>
+<tbody><tr><td style='text-align:left;' ><strong>true</strong></td><td>true</td><td>true</td></tr><tr><td style='text-align:left;' ><strong>false</strong></td><td>true</td><td>false</td></tr></tbody>
+</table></figure>
+<h4>NON ou NOT</h4>
+<p>Cette opération n&#39;utilise qu&#39;un seul booléen. La valeur de ce booléen est inversée.</p>
+<pre><code class='language-javascript' lang='javascript'>! bool2;
+</code></pre>
+<figure><table>
+<thead>
+<tr><th style='text-align:left;' ><strong>true</strong></th><th>false</th></tr></thead>
+<tbody><tr><td style='text-align:left;' >false</td><td>true</td></tr></tbody>
+</table></figure>
+<h3>Les opérations qui renvoient un booléen</h3>
+<p>Certaines opérations entre deux valeurs de types quelconques renvoient des booléens qui peuvent être stockés dans des variables ou utilisée dans des opérations et conditions. Ce sont des opérations de comparaison.</p>
+<p>Dans la liste suivante, <code>a</code> et <code>b</code> sont deux variables. Si ces variables ne sont pas de même type, une conversion sera effectuée. Attention donc car ce comportement est parfois imprévisible.</p>
+<ul>
+<li><strong><code>a &lt; b</code></strong>: renvoi <code>true</code> si a est strictement inférieur à b.</li>
+<li><strong><code>a &lt;= b</code></strong>: renvoi <code>true</code> si a est inférieur ou égal à b.</li>
+<li><strong><code>a &gt; b</code></strong>: renvoi <code>true</code> si a est strictement supérieur à b.</li>
+<li><strong><code>a &gt;= b</code></strong>: renvoi <code>true</code> si a est supérieur ou égal à b.</li>
+<li><strong><code>a == b</code></strong>: renvoi <code>true</code> si a est égal en valeur à b, après conversion. Attention, il y a bien deux signes <kbd>=</kbd>. Un seul signifie l&#39;affectation. C&#39;est une erreur inattention courante.</li>
+<li><strong><code>a != b</code></strong>: renvoi <code>true</code> si a est différent en valeur de b après conversion.</li>
+<li><strong><code>a === b</code></strong>: renvoi <code>true</code> si a est égal à b, en valeur et type. Même si les deux valeurs sont égales (si <code>a == b</code> est vrai), si une conversion a lieue, le résultat sera <code>false</code>.</li>
+<li><strong><code>a !== b</code></strong>: renvoi <code>true</code> si a est différent en valeur ou type à b. Même si les valeurs sont égales (<code>a != b</code> est faux), si une conversion a eu lieue, le résultat sera <code>true</code>.</li>
+
+</ul>
+<p>Si la comparaison est vraie, alors le résultat sera <code>true</code>. Sinon, le résultat sera <code>false</code>.</p>
+<h3>Les conditions</h3>
+<p>Les conditions sont ce qu&#39;on appelle des <strong>structures de contrôle</strong>. Les structures de contrôle contrôle la manière dont le code est exécuter et nous permettent d&#39;aller bien plus loin que la simple exécution d&#39;instructions.</p>
+<p>Les conditions vont nous permettre d&#39;exécuter du code, seulement si certaines conditions sont remplies. Il existe trois types de structures de conditions.</p>
+<h4>if ... else if ... else</h4>
+<p>Ce type de structure utilise des opérations de comparaison et des opérations entre booléens.</p>
+<h5>if</h5>
+<p><strong>If</strong> est la base de cette structure. Il contient la première condition à évaluer et peut exister seul.</p>
+<pre><code class='language-javascript' lang='javascript'>if (condition) {
+	//Code
+}
+</code></pre>
+<p>Le code entre les accolades <kbd>{}</kbd> sera exécuté si la condition est évaluée à <code>true</code>. Si la condition vaut <code>false</code>, le code entre les accolades ne sera pas exécuté et le code continuera après. Après l&#39;exécution du code, le programme reprend son cours normal.</p>
+<p>Un code placé entre accolades est appelé <strong>bloc</strong>. Toutes les instructions seront exécutées en tant qu&#39;une seule.</p>
+<h5>else</h5>
+<p><strong>Else</strong> permet d&#39;ajouter du code à exécuter dans le cas ou la condition du <strong>if</strong> est fausse. Il est facultatif. Après exécution, le programme reprend son cours normal.</p>
+<pre><code class='language-javascript' lang='javascript'>if (condition) {
+    //Code à exécuter si la condition est vraie
+} else {
+    //Code à exécuter si la condition est fausse
+}
+</code></pre>
+<h5>else if</h5>
+<p><strong>Else if</strong> se place entre le <strong>if</strong> et le <strong>else</strong>. Il peut y en avoir autant que nécessaire. Il est facultatif. La présence d&#39;un <strong>else</strong> n&#39;est pas non plus obligatoire pour insérer des <strong>else if</strong>.</p>
+<pre><code class='language-javascript' lang='javascript'>if (condition) {
+    //Code
+} else if (condition) {
+    //Code
+} else if (condition) {
+    
+} ...
+} else {
+    //Code
+}
+</code></pre>
+<p>Le code d&#39;un <strong>else if</strong> sera exécuté si aucun des conditions du <strong>if</strong> et des <strong>else if</strong> précédents n&#39;est vraie (donc si aucun code de la condition n&#39;a été exécuté). Une fois le code exécuté, le programme sort de la condition et reprend son cours normal. Un seul <strong>else if</strong> n&#39;est donc exécutable.</p>
+<h4>switch</h4>
+<p><strong>Switch</strong> est une autre forme de condition qui vérifie une égalité.</p>
+<pre><code class='language-javascript' lang='javascript'>switch (variable) {
+    case val:
+        //Code
+        break;
+    case val2:
+        //Code
+        break;
+    ...
+    default:
+    	//Code
+}
+</code></pre>
+<p>On va tester l&#39;égalité de la variable avec les valeurs. Dès que l&#39;on trouve une valeur égale à la variable, le code contenu dans le <em>case</em> est exécuté.</p>
+<p><code>break;</code> permet d&#39;arrêter l&#39;exécution du code et de sortir du switch. Sans cette instruction, le programme continuerai jusqu&#39;au prochain <em>break</em> ou jusqu&#39;à la fin du switch, en passant par plusieurs <em>case</em>. C&#39;est parfois ce que l&#39;on souhaite, mais il faut comprendre cette mécanique.</p>
+<p>Enfin, <code>default</code> contient le code à exécuter si aucun <em>case</em> n&#39;a été validé.</p>
+<h4>Un petit mot sur le code</h4>
+<p>Le code contenu dans ces structures de contrôle peut également contenir des conditions, mais aussi tout type de structure de controle ou d&#39;instructions. On peut donc imbriquer les <em>if</em> par exemple.</p>
+<h4>Dernière structure de condition: les conditions ternaires</h4>
+<p>Ce concept est plus compliqué. Il s&#39;utilise lors de l&#39;affectation et permet de donner une valeur différente à la variable en fonction d&#39;une condition.</p>
+<pre><code class='language-javascript' lang='javascript'>variable = (condition)? val1 : val2;
+</code></pre>
+<p>Si la condition est vraie, on renvoi val1 (ici, on affecte val1 à variable). Si la condition est fausse, on renvoi val2.</p>
+<p>On peut également imbriquer ce type de conditions.</p>
+</body>
+</html>

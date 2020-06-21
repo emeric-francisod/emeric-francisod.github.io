@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+
+    <head>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width initial-scale=1'>
+        <title>Cours n°1 Les variables</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Cours n°1: Les variables</h1>
+        </header>
+
+        <section>
+            <h2>HTML</h2>
+            <p>HTML est un langage de description balisé. Il permet de décrire le contenu d'une page web, sans se soucier de la mise en forme.</p>
+
+            <h3>Ecrire le code HTML</h3>
+            <p>Le code HTML s'écrit dans un fichier d'extension <strong>.html</strong>. On appelle souvent le fichier principal <strong>index.html</strong>.</p>
+
+            <h3>Balises et attributs HTML</h3>
+            <p>On utilise des balises pour décrire le contenu de la page web. Chaque balise possède un nom et représente un certain élément (titre, paragraphe, image, ...). Elles possède un sens (sémantique) et souvent une mise en page par défaut.</p>
+
+            <p class="warning">Il ne faut pas utiliser une balise pour changer l'apparence du texte. C'est la fonction du langage CSS que nous verrons plus tard. On utilise une balise pour insérer un élément particulier.</p>
+
+            <p class="warning">Certaines balises peuvent contenir d'autres éléments (balises ou texte). Dans ce cas, elles commencent par une balise ouvrante et se terminent par une balise fermante:</p>
+
+            <pre><code>
+&lt;nomDeLaBalise&gt; &lt;!--Balise ouvrante--&gt;
+  	Contenu
+&lt;/NomDeLaBalise&gt;&lt;!--Balise fermante--&gt;
+            </code></pre>
+
+            <p class="note">
+                Une balise ne peut être fermée que si les balises qu'elle contient sont fermées également.
+            </p>
+            <p class="note">
+                Le texte entre &lt;!-- et --&gt; est ce qu'on appelle un commentaire. Il s'agit d'une indication laissée par le programmeur pour les personnes lisant le programme. Ces informations ne seront pas lues par le naviateur. Attention, puisque tout le monde à accès à ce texte, il ne faut pas y mettre d'informations sensibles (comme des mots de passe).
+            </p>
+
+            <p>On peut compléter une balise avec des attribut. Les attributs permettent de donner des détails sur l'utilisation de la balise, de fournir des informations au navigateur ou de modifier le contenu de la balise:</p>
+
+            <pre><code>
+&lt;nomDeLaBalise nomDeLAttribut=&quot;valeur&quot;&gt;
+    Contenu
+&lt;/nomDeLaBalise&gt;
+            </code></pre>
+
+            <p class="note">Un élément peut posséder plusieurs attributs, il suffit de les mettre les uns à la suite des autres.</p>
+            <p class="note">Certains attributs ne possèdent pas de valeur.</p>
+
+            <p>Certaines balises ne peuvent rien contenir. Elles permettent parfois d'insérer un élément ou de fournir des données au navigateur. On les utilise souvent avec des attributs:</p>
+
+            <pre><code>
+&lt;nomDeLaBalise attributOptionnel=&quot;valeur&quot; autreAttributSansValeur /&gt;
+            </code></pre>
+
+
+
+            <h3>Page de base en HTML: &quot;Hello, World!&quot;</h3>
+            <p>La page &quot;Hello, World!&quot; est souvent la première page créée (et de manière générale le premier programme créé). C'est un programme simple qui affiche une sorte de bonjour. Mais le cette page est également un excellent moyen d'observer la structure de base d'un programme. Toute les pages écrites devront au minimum avoir la structure suivante (sauf le contenu de <code>&lt;body&gt;</code> et de <code>&lt;title&gt;</code> qui vont changer en fonction de la page.</p>
+
+            <pre><code>
+&lt;!DOCTYPE html&gt; &lt;!--Cette ligne indique au navigteur que la page contient du code HTML.--&gt;
+
+&lt;html&gt;&lt;!--La balise &amp;lt;html&amp;gt; englobe tout le contenu--&gt;
+    &lt;head&gt; &lt;!--Cette balise contient des métadonnées, informations utiles au navigateur mais généralement non visibles par l'utilisateur.--&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;&lt;!--Permet de choisir le set de caractères. utf-8 permet d&amp;#39;utiliser presque tous les caractères (alphabet latin, idéogrammes asiatiques, arabe, emojis, signes mathématiques, ...).--&gt;
+        &lt;title&gt;Titre&lt;/title&gt;&lt;!--Titre de la page, parfois visible sur l&amp;#39;onglet.--&gt;
+    &lt;/head&gt;&lt;!--Fermeture de la balise &lt;head&gt;--&gt;
+
+    &lt;body&gt;&lt;!--La balise &lt;body&gt; contient tout le contenu visible de la page.--&gt;
+        &lt;!--Dans cette page, nous avons un titre &lt;h1&gt; ainsi qu'un paragraphe &lt;p&gt;--&gt;
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+        &lt;p&gt;Bonjour tout le monde!&lt;/p&gt;
+    &lt;/body&gt;&lt;!--Fermeture de la balise &lt;body&gt;--&gt;
+
+&lt;/html&gt;&lt;!--Fermeture de la balise &lt;html&gt;--&gt;
+  </code></pre>
+        </section>
+
+        <section>
+            <h2>JavaScript</h2>
+            <h3>Ecrire le code JavaScript</h3>
+            <p>Nous pouvons écrire le code JavaScript de deux manières:</p>
+
+            <ul>
+                <li>Soit dans un fichier indépendant d'extension <strong>.js</strong>. Cette méthode est à favoriser car elle permet une maintenance et une réutilisation du code plus simple. On nomme souvent le fichier principal <strong>script.js</strong>.</li>
+            </ul>
+
+            <pre><code>
+&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+            </code></pre>
+
+            <ul>
+                <li>Soit directement dans la balise <code>&lt;script&gt;</code>. Cette méthode est à éviter.</li>
+            </ul>
+
+            <pre><code>
+&lt;script&gt;
+  	Code JavaScript
+&lt;/script&gt;
+            </code></pre>
+
+            <p>Chaque instruction JavaScript se termine par un <kbd>;</kbd>. Rappelons d'une instruction est une étape de l'algorithme.</p>
+
+            <p>Il est également possible d'insérer des commentaires en JavaScript, comme pour HTML. Il existe deux types de commentaires:</p>
+
+            <ul>
+                <li>Les commentaires de ligne qui commencent par <kbd>//</kbd> et se terminent à la fin de la ligne:</li>
+            </ul>
+
+            <pre><code>
+instruction; //On commente cette instruction
+            </code></pre>
+
+            <ul>
+                <li>Les blocs de commentaire qui commencent par <kbd>/*</kbd> et se terminent par <kbd>*/</kbd>; et peuvent occuper plusieurs lignes:</li>
+            </ul>
+
+            <pre><code>
+instruction; /*Début du commentaire
+On continue le commentaire
+Fin du commentaire*/
+            </code></pre>
+
+            <h3>Variables en JavaScript</h3>
+            <p>Une variables est un nom à qui on peut donner une valeur.Les variables permettent de garder en mémoire une valeur pour la réutiliser plus tard ou la modifier.Les variables possèdent un cycle de vie. en JavaScript:</p>
+
+            <ul>
+                <li>La déclaration et l'initialisation. La déclaration permet de créer une variable et l'initialisation lui donne sa première valeur. L'initialisation est facultative.</li>
+            </ul>
+
+            <pre><code>
+let nomDeVariable; //Déclaration seule
+let nomDeVariable = valeur; //Déclaration et initialisation
+            </code></pre>
+
+            <p class="note">Il est important de donner un nom clair à une variable, sans abbréviations. Si on souhaite avoir un nom avec plusieurs mots (comme dans l'exemple), on colles les mots et chaque mot commence par une majuscule.</p>
+
+            <ul>
+                <li>L'utilisation et l'affectation. Utiliser une variable revient à récupérer sa valeur. L'affectation consiste à donner une nouvelle valeur à la variable. </li>
+            </ul>
+
+            <pre><code>
+console.log(nomDeVariable);//utilisation de la variable pour l'afficher
+nomDeVariable = nouvelleValeur; //Affectation
+nomDeVariable = nomDeVariable + 1;//Utilisation et affectation
+            </code></pre>
+
+            <p class="note">le dernier exemple utilise la même variable des deux côtés du <kbd>=</kbd>. Cette instruction ajoute 1 à la valeur de la variable. la navigateur va d'abord utiliser la variable dans l'addition, puis utiliser le résultat pour l'affectation.</p>
+
+            <h4>Valeurs des variables</h4>
+            <p>Une variable peut posséder différents types de valeurs:</p>
+            <h5>Les nombres (Number)</h5>
+            <p>On peut utiliser des nombres entiers ou décimaux.</p>
+            <p class="note">Contrairement au français, en programmation nous utilisons le point <kbd>.</kbd> et non la virgule <kbd>,</kbd> en guise de séparateur décimal</p>
+            <p>Voici quelques exemples:</p>
+            <ul>
+                <li><code>1</code></li>
+                <li><code>0</code></li>
+                <li><code>586</code></li>
+                <li><code>-6558</code></li>
+                <li><code>0.22584</code></li>
+                <li><code>-7854.5</code></li>
+            </ul>
+
+            <h5>Les chaînes de caractères (String)</h5>
+            <p>Ce sont des suites de 0 caractères ou plus.</p>
+            <p>On les place entre guillemets, simples ou doubles.</p>
+            <p>Voici quelques exemples:</p>
+            <ul>
+                <li><code>&quot;Je suis une chaîne de caractères&quot;</code></li>
+                <li><code>'4'</code></li>
+                <li><code>&quot;&quot;</code> (Il s'agit de la chaîne vide)</li>
+                <li><code>'...'</code></li>
+            </ul>
+
+            <h5>Les booléens (Boolean)</h5>
+            <p>Nous en apprendrons un peu plus sur les cours suivants. Pour faire simple, c'est un type qui possède deux
+                valeurs:</p>
+            <ul>
+                <li><code>true</code> (vrai)</li>
+                <li><code>false</code> (faux)</li>
+            </ul>
+
+            <h5>Undefined</h5>
+            <p>Unedefined est le type d'une variable qui n'a pas été initialisée.</p>
+
+            <h5>Object</h5>
+            <p>Comme pour les booléens, nous en apprendrons plus dans les cours suivant.</p>
+            <p>Une valeur de ce type nous intéresse cependant: <strong>null</strong>. Cette valeur représente l'absence de valeur et est très utile. Nous verrons des exemples régulièrement pendant les cours.</p>
+
+
+            <h4>Opérations</h4>
+            <p>Voici la liste des opérations de bases en JavaScript:</p>
+            <ul>
+                <li><code>a + b</code> est <strong>l'addition</strong> quand les deux membres sont des nombres. Si l'un d'entre eux est un chaîne de caractères, alors il s'agit de l'opérateur de <strong>concaténation</strong>. La concaténation permet de mettre bout à bout des chaînes de caractères pour en faire une plus grande.</li>
+                <li><code>a - b</code> est <strong>la soustraction</strong>.</li>
+                <li><code>a * b</code> est <strong>la multiplication</strong>. Attention, il s'agit de la touche étoile <kbd>*</kbd> et non de la touche <kbd>x</kbd>.</li>
+                <li><code>a / b</code> est <strong>la division</strong>.</li>
+                <li><code>a % b</code> est <strong>le modulo</strong>. Le modulo est une opération peu connue. Il s'agit de prendre le reste de la division euclidienne (ou division entière) de a par b.</li>
+                <li><code>a = b</code> est <strong>l'affectation</strong>, comme nous l'avons déjà vu.</li>
+            </ul>
+            <p>Comme en mathématiques, les opérations ont un ordre de priorité: la multiplication et la division sont prioritaires sur l'addition et la soustraction. Cet ordre de priorité peut être modifié avec l'utilisation de parenthèses <kbd>()</kbd>.</p>
+        </section>
+
+        <section>
+            <h2>P5.js</h2>
+            <p>P5.js est une librairie JavaScript permettant de faciliter la création de graphismes, jeux et animations.</p>
+            <p>Vous trouverez en dessous le squelette des fichiers HTML et JavaScript pour utiliser cette librairie. On appellera généralement le fichier JavaScript principal <strong>sketch.js</strong>.</p>
+
+            <h3>index.html</h3>
+            <pre><code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;title&gt;Le titre de la page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;script src=&quot;https://cdn.jsdelivr.net/npm/p5@1.0.0/lib/p5.js&quot;&gt;&lt;/script&gt;
+        &lt;script src=&quot;sketch.js&quot;&gt;&lt;/script&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+            </code></pre>
+
+            <h3>sketch.js</h3>
+            <pre><code>
+function setup() {
+    createCanvas(500, 500);
+}
+
+function draw() {
+
+}
+            </code></pre>
+        </section>
+    </body>
+
+</html>
