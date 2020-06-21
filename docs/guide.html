@@ -1,11 +1,297 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guide du débutant</title>
-</head>
-<body>
 
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Guide du débutant</title>
+    </head>
+
+    <body>
+        <header>
+            <h1>Le guide du débutant</h1>
+        </header>
+        <section>
+            <h2>Introduction</h2>
+            <p>La programmation est une activité accessible à tous, mais on peut vite être découragé si l’on n’a pas
+                l’habitude. Comment fonctionne mon logiciel ? Comment taper ce caractère ?... </p>
+            <p>Ce document est là pour répondre à certaines questions que l’on se pose quand on débute et ainsi vous
+                aider à vous concentrer sur le principal : créer un programme et s’amuser.</p>
+            <p>Ce cours se concentre sur la création de pages web et de scripts JavaScript, à exécuter dans le
+                navigateur. La plupart des conseils restent cependant valable pour tout langage de programmation.</p>
+        </section>
+
+        <section>
+            <h2>De quel matériel ai-je besion pour commencer la programmation?</h2>
+            <p>L’avantage de la programmation web est qu’elle ne nécessite pas de matériel précis. Il vous faudra tout
+                de même un ordinateur (Windows, Mac ou Linux, peu importe) avec une connexion internet et un navigateur
+                web récent (Google Chrome, Mozilla Firefox, Safari, Microsoft Edge, … mais surtout pas Internet
+                Explorer, sauf si on aime s’arracher les cheveux).</p>
+            <p>Il vous faudra également un éditeur de texte pour écrire le code. Attention, les logiciels comme
+                Microsoft Word ou Libre Office, qui permettent de créer des documents et de les mettre en page, ne
+                fonctionneront pas.</p>
+
+            <h3>Les éditeurs de texte</h3>
+            <h4>Que choisir ?</h4>
+            <p>Je vous propose d’utiliser l’un des suivants :</p>
+            <ul>
+                <li><strong>Visual Studio Code</strong> : créé par Microsoft, il est très populaire (et c’est mon
+                    favoris). Je l’utiliserai généralement pendant le cours.</li>
+                <li><strong>Notepad++</strong> : le plus simple de tous. Il n’est disponible que sous Windows.</li>
+                <li><strong>Sublime Text</strong> : un éditeur de texte puissant, qui ressemble beaucoup à Visual Studio
+                    Code. Attention, ce logiciel peu vous demander une licence pour l’utiliser. Mais vous n’êtes pas
+                    obligé. Si jamais vous ne pouvez plus l’utiliser, choisissez-en un autre. Ne payez jamais pour un
+                    éditeur de texte.</li>
+                <li><strong>Brackets</strong> : encore un éditeur puissant créé par Adobe.</li>
+            </ul>
+            <p class="warning">Attention, certains logiciels sont plus difficiles à prendre en main. A moins que vous
+                ayez l’habitude, je vous recommande de ne pas utiliser ni Atom, ni Vim, ni Emacs.</p>
+            <p>Les éditeurs de texte facilitent l’écriture de code grâce à plusieurs procédés :</p>
+            <ul>
+                <li>Coloration syntaxique. Les différents mots clefs, noms de variables et de fonctions ou valeurs
+                    seront colorés différemment pour faciliter la lecture.</li>
+                <li>Autocomplétion. Une liste de mots utilisables peut apparaître lors de l’écriture du code. Si le mot
+                    désiré est dans cette liste, on peut le choisir et appuyer sur Entrée pour l’insérer.</li>
+                <li>Gestion de plusieurs fichiers. On peut facilement travailler sur plusieurs fichiers à la fois. On
+                    retrouve généralement nos documents ouverts dans des onglets au dessus de la zone d’écriture.</li>
+                <li>Certains éditeurs plus puissants proposent d’autres options comme la fermeture automatique des
+                    balises HTML.</li>
+            </ul>
+
+            <h4>Comment les utiliser?</h4>
+            <p>Le mieux pour apprendre à utiliser un éditeur de texte est de tester les différentes options. Mais pour
+                commencer, voici quelques actions importantes et leurs étapes de réalisation.</p>
+            <p class="note">Sur Windows, la touche Maj, aussi appelée Shift, est parfois représentée avec ce symbole ⇧.
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Action</th>
+                        <th>Suite d'opérations en français</th>
+                        <th>Suite d'opérations en anglais</th>
+                        <th>Raccourcis clavier Windows</th>
+                        <th>Raccourcis clavier Mac OS</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Nouveau fichier</td>
+                        <td>Fichier → Nouveau</td>
+                        <td>File → new File</td>
+                        <td>Ctrl + N</td>
+                        <td>⌘N</td>
+                    </tr>
+                    <tr>
+                        <td>Ouvrir un fichier existant</td>
+                        <td>Fichier → Ouvrir</td>
+                        <td>File → Open File</td>
+                        <td>Ctrl + O</td>
+                        <td>⌘O</td>
+                    </tr>
+                    <tr>
+                        <td>Enregistrer sous</td>
+                        <td>Fichier → Enregistrer Sous</td>
+                        <td>File → Save as...</td>
+                        <td>Ctrl + Maj + S</td>
+                        <td>⇧⌘V</td>
+                    </tr>
+                    <tr>
+                        <td>Enregistrer</td>
+                        <td>Fichier → Enregistrer</td>
+                        <td>File → Save</td>
+                        <td>Ctrl + S</td>
+                        <td>⌘S</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="warning">L’ordre des opérations et les raccourcis clavier présentés sont ceux utilisés par la majorité des logiciels. Il se peut que ce soit différent sur votre éditeur de texte.</p>
+            <p class="warning">Certains logiciels sont en Anglais.</p>
+            <p class="warning">Lorsque l’on enregistre un fichier pour la première fois (enregistrer sous), bien faire attention de lui donner la bonne extension manuellement (.html, .js, …) et de le mettre dans un dossier que l’on pourra retrouver.</p>
+        </section>
+
+        <section>
+            <h2>Comment écrire mon code ?</h2>
+            <p>Quand on n’a pas l’habitude d’écrire au clavier, ça peut parfois prendre du temps. Et ce n’est pas grave. Plus on écrit, plus on va vite.</p>
+            <p>Dans les premiers cours, vous n’aurez qu’à recopier ce que j’écris à l’écran, nous prendrons notre temps et attendrons tout le monde.</p>
+            <h3>Caractères spéciaux</h3>
+            <p>En programmation, nous utilisons certains caractères peu courants. Voici un liste (non exhaustive) des caractères fréquemment utilisés :</p>
+            <p class="note">Sur Windows, la touche Maj, aussi appelée Shift, est parfois représentée avec ce symbole ⇧.</p>
+            <table>
+                <thead>
+                  <tr>
+                    <th>Touche</th>
+                    <th>Nom</th>
+                    <th>Comment l'écrire (Windows)</th>
+                    <th>Comment l'écrire (Mac)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>"</td>
+                    <td>Guillemet double</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>#</td>
+                    <td>Croisillon</td>
+                    <td>Alt Gr + 3</td>
+                    <td>⇧@</td>
+                  </tr>
+                  <tr>
+                    <td>'</td>
+                    <td>Guillemet simple ou apostrophe</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>{ }</td>
+                    <td>Accolades</td>
+                    <td>Alt Gr + '<br>Alt Gr + =</td>
+                    <td>⌥ (<br>⌥ )</td>
+                  </tr>
+                  <tr>
+                    <td>( )</td>
+                    <td>Parenthèses</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>[ ]</td>
+                    <td>Crochet</td>
+                    <td>Alt Gr + (<br>Alt Gr + )</td>
+                    <td>⌥ ⇧(<br>⌥ ⇧)</td>
+                  </tr>
+                  <tr>
+                    <td>+</td>
+                    <td>Plus</td>
+                    <td>Shift + =</td>
+                    <td>⇧=</td>
+                  </tr>
+                  <tr>
+                    <td>-</td>
+                    <td>Moins ou tiret</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>*</td>
+                    <td>Fois ou étoile</td>
+                    <td></td>
+                    <td>⇧$</td>
+                  </tr>
+                  <tr>
+                    <td>/</td>
+                    <td>Diviser ou slash</td>
+                    <td>Shift + :</td>
+                    <td>⇧:</td>
+                  </tr>
+                  <tr>
+                    <td>=</td>
+                    <td>Egal</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>%</td>
+                    <td>Modulo ou pourcent</td>
+                    <td>Shift + ù</td>
+                    <td>⇧ù</td>
+                  </tr>
+                  <tr>
+                    <td>|</td>
+                    <td>Barre verticale</td>
+                    <td>Alt Gr + -</td>
+                    <td>⌥ ⇧L</td>
+                  </tr>
+                  <tr>
+                    <td>&amp;</td>
+                    <td>Esperluette</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>!</td>
+                    <td>Point d'exclamation</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>`</td>
+                    <td>Apostrophe inversée</td>
+                    <td>Alt Gr + è puis Espace</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>\</td>
+                    <td>Anti-slash</td>
+                    <td>Alt Gr + _</td>
+                    <td>⌥ ⇧:</td>
+                  </tr>
+                  <tr>
+                    <td>_</td>
+                    <td>Tiret du bas</td>
+                    <td></td>
+                    <td>⇧-</td>
+                  </tr>
+                  <tr>
+                    <td>@</td>
+                    <td>Arobase</td>
+                    <td>Alt Gr + à</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>,</td>
+                    <td>Virgule</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>.</td>
+                    <td>Point</td>
+                    <td>Shift + ;</td>
+                    <td>⇧;</td>
+                  </tr>
+                  <tr>
+                    <td>;</td>
+                    <td>Point-virgule</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>:</td>
+                    <td>Deux points</td>
+                    <td></td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>&lt;&gt;</td>
+                    <td>Inférieur et supérieur ou chevron</td>
+                    <td>&lt;<br>Shift + &lt;</td>
+                    <td>&lt;<br>⇧&lt;</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td>Tabulation et tabulation inversée</td>
+                    <td>⭾ <br>Shift + ⭾</td>
+                    <td>⇥ <br>⇧⇥</td>
+                  </tr>
+                </tbody>
+            </table>
+            <p class="warning">Les indices d’écriture n’utilisent pas le pavé numérique du clavier, car tout les claviers n’en possèdent pas. Les chiffres présents représentent donc les touches au dessus des lettres.</p>
+            <h3>Remarques et conseils</h3>
+            <ul>
+                <li>La programmation est universelle. Du coup, la plupart des fonctions et outils sont en anglais. C’est perturbant au début mais on fini par s’y faire. En plus de progresser en programmation, on progresse en anglais !</li>
+                <li>Pendant les cours je vous parlerai d’indentation. Il s’agit de placer une ou plusieurs tabulations avant la ligne de code lorsque l’on entre dans un bloc. Dans certains langages, c’est obligatoire. Avec JavaScript, ce n’est pas obligatoire mais conseillé pour la lisibilité.</li>
+                <li>Attention à l’orthographe ! Si une faute de frappe est présente, le programme pourrait ne pas fonctionner.</li>
+                <li>Pour faciliter la programmation, il est possible sur PC et Mac de placer différentes fenêtres côte à côte sur l’écran. Pour Windows, il suffit de déplacer la fenêtre sur le bord gauche ou droit, et pour Mac, cliquer et glisser la fenêtre vers le bord en maintenant le bouton vert enfoncé.</li>
+                <li>Pour finir, le code écrit ne sera visible que par les personnes ayant accès à votre ordinateur, à moins de le mettre en ligne volontairement.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Introduction à la programmation web</h2>
+        </section>
+    </body>
+
 </html>
