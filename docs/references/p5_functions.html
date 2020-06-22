@@ -10,5 +10,82 @@
         <h1>Référence des fonctions p5js</h1>
         <p>Cette page contient toutes les fonctions p5js prédéfinies que nous avons vu au travers des cours.</p>
     </header>
+
+    <table>
+        <tr>
+            <th>Fonction</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><code>createCanvas(l, h)</code></td>
+            <td>
+                <p>Permet de créer une zone de dessin.</p>
+                <ul>
+                    <li>l et h sont la largeur et la hauteur de la zone de dessin en pixels.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <code>background(gris)</code>
+                <br>
+                <code>background(rouge, vert, bleu)</code>
+            </td>
+            <td>
+                <p>Permet de remplir la toile avec une couleur.</p>
+                <ul>
+                    <li>Si on choisi la couleur grise, on donne un entier entre 0 (noir) et 255 (blanc).</li>
+                    <li>Si on choisi une autre couleurs, on choisi une valeur entre 0 (absence) et 255 (le plus possible) pour la quantité de rouge, vert et bleu.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><code>strokeWeight(int)</code></td>
+            <td>
+                <p>Epaisseur du contour.</p>
+                <ul>
+                    <li>int est un entier donnant l'épaisseur du contour en pixels.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><code>stroke(couleur)</code></td>
+            <td>
+                <p>Couleur du contour.</p>
+                <ul>
+                    <li>Comme pour background, on peut donner une valeur de gris ou une valeur rouge, vert et bleu.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><code>fill(couleur)</code></td>
+            <td>
+                <p>Couleur de l'intérieur des formes.</p>
+                <ul>
+                    <li>Comme pour background, on peut donner une valeur de gris ou une valeur rouge, vert et bleu.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><code>circle(x, y, rayon)</code></td>
+            <td>
+                <p>Dessine un cercle.</p>
+                <ul>
+                    <li>x et y sont les coordonnées du centre du cercle.</li>
+                    <li>rayon est le rayon du cercle.</li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td><code>line(x, y, x2, y2)</code></td>
+            <td>
+                <p>Dessine une ligne.</p>
+                <ul>
+                    <li>x et y sont les coordonnées du point de départ.</li>
+                    <li>x2 et y2 sont les coordonnées du point d'arrivée.</li>
+                </ul>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
