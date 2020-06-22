@@ -1,0 +1,109 @@
+html {
+    min-height: 100%;
+    background-color: #5c5c5c;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    width: 80%;
+    min-height: 100%;
+    margin: auto;
+    padding-bottom: 50px;
+    background-color: #e9e9e9;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    background-color: #8fabe0;
+    padding: 25px 75px;
+    border-bottom: 5px solid #6c80a5;
+    box-sizing: border-box;
+}
+
+section {
+    margin: 50px 75px 25px 75px;
+    word-wrap: break-word;
+}
+
+section > table {
+    width: 100%;
+    margin: auto;
+}
+table {
+    border-collapse: collapse;
+}
+
+body > table {
+    width: 80%;
+    margin: 25px auto;
+}
+
+td, th {
+    border: 1px solid black;
+    padding: 10px 16px;
+}
+
+header nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+header nav a {
+    color: black;
+    text-decoration: none;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+pre {
+    word-wrap: break-word;
+    width: 90%;
+    margin: auto;
+}
+
+iframe {
+    border: none;
+}
+
+p.note {
+    font-size: 0.8em;
+    color: darkgreen;
+}
+
+p.note::before {
+    content: "Note: ";
+    font-weight: bold;
+}
+
+p.warning {
+    font-size: 0.8em;
+    color: darkred;
+}
+
+p.warning::before {
+    content: "Attention: ";
+    font-weight: bold;
+}
+
+code {
+    background-color: #646464;
+    color: #dcdcdc;
+    padding: 3px;
+    border-radius: 2px;
+}
+
+kbd {
+    background-color: #c2c2c2;
+    padding: 3px;
+    border-radius: 2px;
+    border: 1px solid #353535;
+    color: #1e1e1e;
+}

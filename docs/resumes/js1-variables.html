@@ -4,6 +4,10 @@
     <head>
         <meta charset='UTF-8'>
         <meta name='viewport' content='width=device-width initial-scale=1'>
+        <link rel="stylesheet" href="../style.css" />
+        <link rel="stylesheet" href="../highlight/styles/vs2015.css" />
+        <script src="../highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
         <title>Cours n°1: Les variables</title>
     </head>
 
@@ -22,37 +26,37 @@
             <h3>Balises et attributs HTML</h3>
             <p>On utilise des balises pour décrire le contenu de la page web. Chaque balise possède un nom et représente un certain élément (titre, paragraphe, image, ...). Elles possède un sens (sémantique) et souvent une mise en page par défaut.</p>
 
-            <p class="warning">Il ne faut pas utiliser une balise pour changer l'apparence du texte. C'est la fonction du langage CSS que nous verrons plus tard. On utilise une balise pour insérer un élément particulier.</p>
+            <p class="warning">Il ne faut pas utiliser une balise pour changer l'apparence du texte. C'est la fonction du langage CSS que nous verrons plus tard. On utilise une balise pour insérer un élément particulier.</p>
 
-            <p class="warning">Certaines balises peuvent contenir d'autres éléments (balises ou texte). Dans ce cas, elles commencent par une balise ouvrante et se terminent par une balise fermante:</p>
+            <p class="warning">Certaines balises peuvent contenir d'autres éléments (balises ou texte). Dans ce cas, elles commencent par une balise ouvrante et se terminent par une balise fermante:</p>
 
-            <pre><code>
+            <pre><code class="html">
 &lt;nomDeLaBalise&gt; &lt;!--Balise ouvrante--&gt;
   	Contenu
 &lt;/NomDeLaBalise&gt;&lt;!--Balise fermante--&gt;
             </code></pre>
 
-            <p class="note">
+            <p class="note">
                 Une balise ne peut être fermée que si les balises qu'elle contient sont fermées également.
             </p>
-            <p class="note">
+            <p class="note">
                 Le texte entre &lt;!-- et --&gt; est ce qu'on appelle un commentaire. Il s'agit d'une indication laissée par le programmeur pour les personnes lisant le programme. Ces informations ne seront pas lues par le naviateur. Attention, puisque tout le monde à accès à ce texte, il ne faut pas y mettre d'informations sensibles (comme des mots de passe).
             </p>
 
             <p>On peut compléter une balise avec des attribut. Les attributs permettent de donner des détails sur l'utilisation de la balise, de fournir des informations au navigateur ou de modifier le contenu de la balise:</p>
 
-            <pre><code>
+            <pre><code class="html">
 &lt;nomDeLaBalise nomDeLAttribut=&quot;valeur&quot;&gt;
     Contenu
 &lt;/nomDeLaBalise&gt;
             </code></pre>
 
-            <p class="note">Un élément peut posséder plusieurs attributs, il suffit de les mettre les uns à la suite des autres.</p>
-            <p class="note">Certains attributs ne possèdent pas de valeur.</p>
+            <p class="note">Un élément peut posséder plusieurs attributs, il suffit de les mettre les uns à la suite des autres.</p>
+            <p class="note">Certains attributs ne possèdent pas de valeur.</p>
 
             <p>Certaines balises ne peuvent rien contenir. Elles permettent parfois d'insérer un élément ou de fournir des données au navigateur. On les utilise souvent avec des attributs:</p>
 
-            <pre><code>
+            <pre><code class="html">
 &lt;nomDeLaBalise attributOptionnel=&quot;valeur&quot; autreAttributSansValeur /&gt;
             </code></pre>
 
@@ -61,7 +65,7 @@
             <h3>Page de base en HTML: &quot;Hello, World!&quot;</h3>
             <p>La page &quot;Hello, World!&quot; est souvent la première page créée (et de manière générale le premier programme créé). C'est un programme simple qui affiche une sorte de bonjour. Mais le cette page est également un excellent moyen d'observer la structure de base d'un programme. Toute les pages écrites devront au minimum avoir la structure suivante (sauf le contenu de <code>&lt;body&gt;</code> et de <code>&lt;title&gt;</code> qui vont changer en fonction de la page.</p>
 
-            <pre><code>
+            <pre><code class="html">
 &lt;!DOCTYPE html&gt; &lt;!--Cette ligne indique au navigteur que la page contient du code HTML.--&gt;
 
 &lt;html&gt;&lt;!--La balise &amp;lt;html&amp;gt; englobe tout le contenu--&gt;
@@ -89,7 +93,7 @@
                 <li>Soit dans un fichier indépendant d'extension <strong>.js</strong>. Cette méthode est à favoriser car elle permet une maintenance et une réutilisation du code plus simple. On nomme souvent le fichier principal <strong>script.js</strong>.</li>
             </ul>
 
-            <pre><code>
+            <pre><code class="html">
 &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
             </code></pre>
 
@@ -97,7 +101,7 @@
                 <li>Soit directement dans la balise <code>&lt;script&gt;</code>. Cette méthode est à éviter.</li>
             </ul>
 
-            <pre><code>
+            <pre><code class="html">
 &lt;script&gt;
   	Code JavaScript
 &lt;/script&gt;
@@ -111,7 +115,7 @@
                 <li>Les commentaires de ligne qui commencent par <kbd>//</kbd> et se terminent à la fin de la ligne:</li>
             </ul>
 
-            <pre><code>
+            <pre><code class="javascript">
 instruction; //On commente cette instruction
             </code></pre>
 
@@ -119,7 +123,7 @@ instruction; //On commente cette instruction
                 <li>Les blocs de commentaire qui commencent par <kbd>/*</kbd> et se terminent par <kbd>*/</kbd>; et peuvent occuper plusieurs lignes:</li>
             </ul>
 
-            <pre><code>
+            <pre><code class="javascript">
 instruction; /*Début du commentaire
 On continue le commentaire
 Fin du commentaire*/
@@ -132,24 +136,24 @@ Fin du commentaire*/
                 <li>La déclaration et l'initialisation. La déclaration permet de créer une variable et l'initialisation lui donne sa première valeur. L'initialisation est facultative.</li>
             </ul>
 
-            <pre><code>
+            <pre><code class="javascript">
 let nomDeVariable; //Déclaration seule
 let nomDeVariable = valeur; //Déclaration et initialisation
             </code></pre>
 
-            <p class="note">Il est important de donner un nom clair à une variable, sans abbréviations. Si on souhaite avoir un nom avec plusieurs mots (comme dans l'exemple), on colles les mots et chaque mot commence par une majuscule.</p>
+            <p class="note">Il est important de donner un nom clair à une variable, sans abbréviations. Si on souhaite avoir un nom avec plusieurs mots (comme dans l'exemple), on colles les mots et chaque mot commence par une majuscule.</p>
 
             <ul>
                 <li>L'utilisation et l'affectation. Utiliser une variable revient à récupérer sa valeur. L'affectation consiste à donner une nouvelle valeur à la variable. </li>
             </ul>
 
-            <pre><code>
+            <pre><code class="javascript">
 console.log(nomDeVariable);//utilisation de la variable pour l'afficher
 nomDeVariable = nouvelleValeur; //Affectation
 nomDeVariable = nomDeVariable + 1;//Utilisation et affectation
             </code></pre>
 
-            <p class="note">le dernier exemple utilise la même variable des deux côtés du <kbd>=</kbd>. Cette instruction ajoute 1 à la valeur de la variable. la navigateur va d'abord utiliser la variable dans l'addition, puis utiliser le résultat pour l'affectation.</p>
+            <p class="note">le dernier exemple utilise la même variable des deux côtés du <kbd>=</kbd>. Cette instruction ajoute 1 à la valeur de la variable. la navigateur va d'abord utiliser la variable dans l'addition, puis utiliser le résultat pour l'affectation.</p>
 
             <h4>Valeurs des variables</h4>
             <p>Une variable peut posséder différents types de valeurs:</p>
@@ -212,7 +216,7 @@ nomDeVariable = nomDeVariable + 1;//Utilisation et affectation
             <p>Vous trouverez en dessous le squelette des fichiers HTML et JavaScript pour utiliser cette librairie. On appellera généralement le fichier JavaScript principal <strong>sketch.js</strong>.</p>
 
             <h3>index.html</h3>
-            <pre><code>
+            <pre><code class="html">
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
@@ -227,7 +231,7 @@ nomDeVariable = nomDeVariable + 1;//Utilisation et affectation
             </code></pre>
 
             <h3>sketch.js</h3>
-            <pre><code>
+            <pre><code class="javascript">
 function setup() {
     createCanvas(500, 500);
 }
